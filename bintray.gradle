@@ -42,6 +42,10 @@ install {
     }
 }
 
+tasks.withType(Javadoc).all {
+   enabled = false
+}
+
 task sourcesJar(type: Jar) {
     from android.sourceSets.main.java.srcDirs
     classifier = 'sources'
